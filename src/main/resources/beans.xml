@@ -5,12 +5,35 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="actorobj" class="com.stackroute.domain.Actor">
-        <property name="name" value="ramesh"></property>
-        <property name="gender" value="male"></property>
-        <property name="age" value="23"></property>
+    <bean name="MovieA,MovieB" class="com.stackroute.domain.Movie" scope="prototype" >
+        <constructor-arg name="actor" ref="actorObj1"></constructor-arg>
     </bean>
-        <bean id="movie" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actorobj"></property>
-        </bean>
-    </beans>
+
+    <bean name="MovieC,MovieD" class="com.stackroute.domain.Movie" scope="prototype" >
+        <constructor-arg name="actor" ref="actorObj2"></constructor-arg>
+    </bean>
+
+    <bean name="MovieE,MovieF" class="com.stackroute.domain.Movie" scope="prototype" >
+        <constructor-arg name="actor" ref="actorObj3"></constructor-arg>
+    </bean>
+
+    <bean id="actorObj1" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="suma" type="String"></constructor-arg>
+        <constructor-arg name="gender" value="female" type="String"></constructor-arg>
+        <constructor-arg name="age" value="24" type="int"></constructor-arg>
+    </bean>
+
+    <bean id="actorObj2" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="trisha" type="String"></constructor-arg>
+        <constructor-arg name="gender" value="female" type="String"></constructor-arg>
+        <constructor-arg name="age" value="24" type="int"></constructor-arg>
+    </bean>
+
+
+    <bean id="actorObj3" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="keerthi" type="String"></constructor-arg>
+        <constructor-arg name="gender" value="female" type="String"></constructor-arg>
+        <constructor-arg name="age" value="24" type="int"></constructor-arg>
+    </bean>
+
+</beans>

@@ -12,24 +12,29 @@ import org.springframework.core.io.FileSystemResource;
 
 import java.security.cert.X509Certificate;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
-        ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-        System.out.println("bean.xml file loaded");
-        Movie movie=context.getBean("movie", Movie.class);
-        movie.display();
+public class Main {
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-        ClassPathResource res=new ClassPathResource("beans.xml");
-        BeanFactory factory=new XmlBeanFactory(res);
-        Movie movie1=context.getBean("movie", Movie.class);
-        movie1.display();
+        Movie movieobjA = context.getBean("MovieA", Movie.class);
+        movieobjA.display();
 
-        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
-        BeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
-        reader.loadBeanDefinitions(new FileSystemResource("src/main/resources/beans.xml"));
-        Movie movie2= (Movie) beanFactory.getBean("movie");
-        movie2.display();
+        Movie movieobjB = context.getBean("MovieB", Movie.class);
+        movieobjB.display();
+
+        Movie movieobjC = context.getBean("MovieC", Movie.class);
+        movieobjC.display();
+
+        Movie movieobjD = context.getBean("MovieD", Movie.class);
+        movieobjD.display();
+
+        Movie movieobjE = context.getBean("MovieE", Movie.class);
+        movieobjE.display();
+
+        Movie movieobjF = context.getBean("MovieF", Movie.class);
+        movieobjF.display();
+
+        Movie movieobj4 = context.getBean("MovieF", Movie.class);
+        System.out.println(movieobj4 == movieobjF);
     }
 }
