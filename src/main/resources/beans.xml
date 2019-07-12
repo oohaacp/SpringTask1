@@ -7,7 +7,7 @@
     <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype" autowire="byName"/>
 
     <bean id="actor" class="com.stackroute.domain.Actor">
-        <property name="name" value="Sandeep"></property>
+        <property name="name" value="Mahesh Babu"></property>
         <property name="gender" value="Male"></property>
         <property name="age" value="35"></property>
     </bean>
@@ -15,7 +15,7 @@
     <bean id="movie1" class="com.stackroute.domain.Movie" scope="prototype" autowire="constructor"/>
 
     <bean id="Actor" class="com.stackroute.domain.Actor">
-        <property name="name" value="Sandeep"></property>
+        <property name="name" value="Mahesh Babu"></property>
         <property name="gender" value="Male"></property>
         <property name="age" value="35"></property>
     </bean>
