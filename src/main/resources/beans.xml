@@ -5,12 +5,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="actorobj" class="com.stackroute.domain.Actor">
+    <bean id="actorobj" class="com.stackroute.domain.Actor">// inserting values in actor class//
         <property name="name" value="ramesh"></property>
         <property name="gender" value="male"></property>
         <property name="age" value="23"></property>
     </bean>
-        <bean id="movie" class="com.stackroute.domain.Movie">
+        <bean id="movie" class="com.stackroute.domain.Movie">//call movie class by using actor reference
         <property name="actor" ref="actorobj"></property>
         </bean>
     </beans>
