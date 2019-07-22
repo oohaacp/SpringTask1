@@ -2,20 +2,20 @@ package com.stackroute.domain;
 
 public class Movie
 {
-   private String m_name;
+   private String mov_name;
    Actor actor;
    public void setActor(Actor actor) {
        this.actor = actor;
    }
 
-    public String getM_name()
+    public String getMov_name()
     {
-        return m_name;
+        return mov_name;
     }
 
-    public void setM_name(String m_name)
+    public void setMov_name(String mov_name)
     {
-        this.m_name = m_name;
+        this.mov_name = mov_name;
     }
     public void display()
     {
